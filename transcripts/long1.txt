@@ -1,0 +1,26 @@
+[09:00] Alex (PM): Morning, folks. Sorry we’re starting a bit late, had some issues with Zoom. Okay, goal today: align on v2 roadmap. Uh, can everyone hear me?  
+[09:01] Priya (Design): Yep.  
+[09:01] Omar (Engineering): Uh yeah, though your mic’s a little fuzzy.  
+[09:02] Alex: Right, thanks. So—where did we leave off last week? We had login flow flagged as a blocker. Jordan, was that fixed?  
+[09:04] Jordan (Eng): Kind of. The patch works on Chrome but Safari’s still failing. I need another day.  
+[09:05] Priya: We can’t push mocks to stakeholders until that’s stable. They want to click through the prototype.  
+[09:06] Alex: Okay, so login is still active. Got it. Let’s put that under “critical.”  
+[09:08] Omar: Also, tiny thing: the billing API returns amounts without currency symbols, which confused QA. Not urgent but flagged.  
+[09:09] Alex: Okay, good catch. We’ll put that under “minor.”  
+[09:11] Priya: Switching topics: dashboard redesign. I sent Figma links but didn’t see comments. Did anyone look?  
+[09:12] Jordan: Sorry, no. I was knee-deep in auth.  
+[09:13] Omar: Same. I skimmed—looked clean, but the color contrast on alerts might fail accessibility.  
+[09:14] Priya: Great, I’ll tweak that. Feedback deadline by Thursday? Otherwise, I’ll lock the file.  
+[09:15] Alex: Works. Next: client pilot. Dana, any update?  
+[09:16] Dana (Customer Success): The pilot group logged 18 sessions last week. Feedback was mostly good, except three complaints: (1) slow load on mobile, (2) export to PDF missing logos, and (3) onboarding docs were too long.  
+[09:18] Alex: Noted. Mobile load time—we should profile network calls. Jordan?  
+[09:19] Jordan: Yeah, I’ll check requests. Maybe images aren’t compressed.  
+[09:20] Dana: Also, pilot wants training before the next board review—September 12.  
+[09:21] Alex: Okay, Mia, can you prepare a training deck?  
+[09:22] Mia (Trainer): Yup. Slides by next Friday.  
+[09:24] Omar: Hold on—September 12 is only two sprints away. If we’re still fixing login, will we be ready?  
+[09:25] Alex: Good question. Let’s make the target a “beta” label, not full launch. Communicate that expectations are limited.  
+[09:26] Dana: I’ll message the client.  
+[09:27] Alex: Cool. Recap action items: Jordan finalizes login + mobile profiling; Priya fixes dashboard colors and locks file Thursday; Mia drafts training; Dana informs client of beta scope. Anything else?  
+[09:29] Priya: Just want to note—we’ll need new icons if we change colors.  
+[09:30] Alex: Good, log that. End of meeting.  

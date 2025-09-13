@@ -1,0 +1,27 @@
+[15:00] CEO (Lisa): Hi everyone, thanks for joining. Before we dive into Q3 numbers, quick housekeeping: next Friday is offsite. Please RSVP by Wednesday.  
+[15:01] Random chatter: “Where’s it at?” “Is food covered?”  
+[15:02] Lisa: It’s in Mountain View, address in the invite. Yes, food’s covered, no pets. Okay, moving on—Q3 revenue was $2.3M, up 12% from Q2. Congrats.  
+[15:03] Applause noises.  
+[15:04] CFO (Rita): On margins, we slipped a bit—AWS costs spiked because of GPU usage. We’ll revisit contracts.  
+[15:05] Omar (Eng): Uh, sorry, is this about training jobs?  
+[15:06] Rita: Yes, partly. We overran cluster hours.  
+[15:07] Lisa: Okay, action: Ops to cap GPU spend. Rita to draft vendor negotiation plan.  
+[15:09] Marketing (Jen): Can I chime in? We need clarity on the October campaign budget. If Ops pulls spend, how does that affect us?  
+[15:10] Lisa: Different budget line, you’re fine.  
+[15:11] Jen: Okay. Also, the campaign video—still waiting on approvals.  
+[15:12] Lisa: Noted. Who owns that?  
+[15:12] Ethan (Design): Uh, me. Sorry, I’ll finalize by Friday.  
+[15:13] Lisa: Great. Moving on: product update. Alex, status on mobile app?  
+[15:14] Alex (PM): We’re behind. Login bugs, same as last week. Hoping for patch this sprint.  
+[15:15] Lisa: Frustrating. Can we commit to October beta?  
+[15:16] Jordan (Eng): Only if QA passes—right now we still fail on Safari.  
+[15:17] Lisa: Okay, then no October promises until confirmed.  
+[15:18] HR (Tom): Sorry to interrupt, but quick note—new healthcare plan rolls out October 1. Everyone needs to re-enroll online. I’ll send details.  
+[15:19] Lisa: Thanks. Back to product. Dana, any client escalations?  
+[15:20] Dana: Yes, Gamma Industries is asking for SOC-2. We’ll lose them if we don’t show progress.  
+[15:21] Lisa: Luis, compliance update?  
+[15:22] Luis: Draft audit report ready by mid-October.  
+[15:23] Lisa: That’s too late for Gamma. Can you prioritize them?  
+[15:24] Luis: I’ll see if we can expedite.  
+[15:25] Lisa: Please. Okay, wrapping up. Action recap: Ops cap GPU spend, Rita drafts negotiation, Ethan finalizes video Friday, Alex/Jordan push login fix, Tom sends healthcare info, Luis prioritizes SOC-2 for Gamma. Meeting over.  
+[15:27] Background chatter: “Lunch?” “Yep.”  

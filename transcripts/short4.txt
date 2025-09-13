@@ -1,0 +1,5 @@
+[16:00] Dana (Sales): We closed two deals this week: ACME Corp and Beta Logistics.  
+[16:02] Raj (Sales Ops): ACME is worth $120k ARR, Beta is $80k.  
+[16:03] Dana: Nice. Pipeline concern — Gamma Industries is stalling. They need a security certification before signing.  
+[16:05] Luis (Compliance): We’ll complete the SOC-2 audit in October. That should unblock Gamma.  
+[16:07] Dana: Good. Action items: Raj updates CRM with new deals, Luis pushes on audit docs, Dana follows up with Gamma mid-October.  

@@ -1,0 +1,5 @@
+[14:00] Sarah (Client): Thanks for joining. The pilot went okay, but some users complained about login times.  
+[14:02] Ethan (Dev Lead): We traced that to our staging server. We’ll move traffic to production tomorrow.  
+[14:04] Sarah: Good. Also, we’d like training materials before rollout. Can you deliver that by next Friday?  
+[14:06] Mia (Trainer): Yes, I’ll draft slides and record a short demo video.  
+[14:08] Sarah: Perfect. Let’s confirm rollout for Sept 25 if testing looks good.  

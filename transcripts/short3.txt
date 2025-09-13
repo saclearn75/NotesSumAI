@@ -1,0 +1,6 @@
+[09:30] Leo: So, big picture — should we launch the mobile app this quarter or wait?  
+[09:31] Nina: My take: launch now with limited features. We’ll get user data faster.  
+[09:33] Omar: But QA found 12 critical bugs last week. I don’t think we’re ready.  
+[09:35] Leo: Okay, compromise: soft launch to 50 beta users in October, then public launch in December.  
+[09:36] Nina: Works for me. I’ll coordinate beta signups.  
+[09:37] Omar: I’ll own the bug fixes and have an update by next sprint review.  

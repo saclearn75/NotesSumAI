@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title>AI Notes Summarizer</title></head>
+<body>
+  <h1>AI Notes Summarizer</h1>
+  <textarea id="input" rows="12" cols="80" placeholder="Paste text here"></textarea><br>
+  <label>Max words: <input id="max" type="number" value="120"></label>
+  <button id="go">Summarize</button>
+  <pre id="out"></pre>
+
+  <script>
+    document.getElementById('go').onclick = async () => {
+      const text = document.getElementById('input').value;
+      const max = parseInt(document.getElementById('max').value || '200', 10);
+      const res = await fetch('http://127.0.0.1:8000/summarize', {
+        method: 'POST',
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({ text, max_words: max })
+      });
+      const data = await res.json();
+      document.getElementById('out').textContent = data.summary || JSON.stringify(data, null, 2);
+    };
+  </script>
+</body>
+</html>

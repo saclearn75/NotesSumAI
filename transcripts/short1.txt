@@ -1,0 +1,6 @@
+[10:01] Alex (PM): Okay, let’s get started. Last week we were blocked on the API migration. Jordan, any update?  
+[10:02] Jordan (Eng): Yeah, I fixed the auth issue Friday. We’re about 80% done. ETA two more days.  
+[10:03] Priya (Design): Quick note — the new dashboard mockups are ready. Sent them yesterday. Feedback would be great by Wednesday.  
+[10:05] Alex: Cool. Also, customer reported a bug in the invoice export. Mark, can you check?  
+[10:06] Mark (Support): Yup, I’ll test and log a ticket today.  
+[10:07] Alex: Action items: Jordan finishes migration, Priya collects design feedback, Mark files invoice bug. Let’s regroup next Monday.  
