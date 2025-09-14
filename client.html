@@ -1,13 +1,38 @@
 <!DOCTYPE html>
 <html>
-<head><meta charset="utf-8"><title>AI Notes Summarizer</title></head>
-<body>
-  <h1>AI Notes Summarizer</h1>
-  <textarea id="input" rows="12" cols="80" placeholder="Paste text here"></textarea><br>
-  <label>Max words: <input id="max" type="number" value="120"></label>
-  <button id="go">Summarize</button>
-  <pre id="out"></pre>
+<head>
+    <meta charset="utf-8">
+    <title>AI Notes Summarizer</title>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" href="styles.css">
 
+</head>
+<body >
+
+    <div>
+        <h1 class="header-box">AI Notes Summarizer</h1>
+
+        <p>This app provides a summary of meeting scripts. </p>
+    </div>
+    <div class="input-output">
+        <div class="block-element">
+            <form action="/process/" enctype="multipart/form-data" method="post">
+                
+                <label for="file_upload"  style="text-align: center; font-size: 30;">Upload a file:</label><p></p>
+                <input type="file" id="file_upload" name="file"><br><br>
+                
+                <!-- <input type="submit" value="Summarize"> -->
+            </form>
+            <p style="text-align: center; font-size: 30;"> OR </p> 
+            <label for="input"  style="text-align: center; font-size: 30;">Paste Text Here:</label><p></p>
+            <textarea id="input" rows="12" cols="80" placeholder="Paste text here"></textarea><br>
+            <label>Max words: <input id="max" type="number" value="120"></label>
+            <button id="go">Summarize</button>
+
+        </div>
+        
+        <div id="out" class="block-element"> Output here </div>
+    </div>
   <script>
     document.getElementById('go').onclick = async () => {
       const text = document.getElementById('input').value;
@@ -18,8 +43,42 @@
         body: JSON.stringify({ text, max_words: max })
       });
       const data = await res.json();
-      document.getElementById('out').textContent = data.summary || JSON.stringify(data, null, 2);
+      document.getElementById('out').innerHTML = data.summary || JSON.stringify(data, null, 2);
     };
+
+    document.addEventListener('DOMContentLoaded', function() {
+        
+        const fileInput = document.getElementById('file_upload');
+        const textArea = document.getElementById('input');
+
+        fileInput.addEventListener('change', function(event) {
+            
+            const file = event.target.files[0]; // Get the first file selected
+            
+            if (!file) {
+                return; // Exit if no file was selected
+            }
+            
+            const reader = new FileReader();
+
+            // This function runs when the file is finished loading
+            reader.onload = function(e) {
+                const fileContent = e.target.result;
+                // The content of the file is now in the `fileContent` variable
+                textArea.value = fileContent; // Assign the content to the text area
+            };
+
+            // This function runs if there's an error
+            reader.onerror = function(e) {
+                console.error("Error reading file:", e);
+                alert("Failed to read file.");
+            };
+
+            // Read the file as text
+            reader.readAsText(file);
+        });
+    });
+
   </script>
 </body>
 </html>

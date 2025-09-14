@@ -1,0 +1,54 @@
+
+body {
+    background-color: black;
+    color: rgb(216, 186, 14);
+    font-size: 20;
+    margin: 20px;
+}
+
+body {
+  font-family: 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+  /* Always provide a generic font family as a fallback */
+}
+
+h1, h2, h3 {
+  font-family: 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+}
+
+p {
+    font-size: 24px;
+}
+
+.header-box {
+  /* Border */
+  border: 4px solid rgb(216, 186, 14); 
+  border-radius: 10px;
+
+  /* Text Alignment */
+  text-align: center; 
+
+  /* Text Size and Weight */
+  font-size: 40px;
+  font-weight: bold;
+  text-decoration: underline;
+
+  /* Vertical Centering (using Flexbox) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90px; 
+}
+
+.input-output {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+}
+
+.block-element{
+    border: 2px solid rgb(216, 186, 14); 
+    border-radius: 10px;
+    padding: 10px;
+}

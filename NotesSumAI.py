@@ -54,15 +54,19 @@ def summarize(payload: SummarizeIn):
 
     PROMPT = f'''
                             Summarize the following text in under {payload.max_words} words.
-                            Keep key facts, ignore fluff unless things are tense or swear words are used.
-                            First, in the summary section, state the main takeaways, topics or issues discussed. 
-                            Then, If any  actions were assigned or -taken by self specify them clearly in the following format - \n
-                                                        Action items - 
-                            - [Attendee] 
-                                    - <Action items assigned>
-                            - [Attendee] ... and so on.. 
+                            Keep key facts, actions and dates, ignore fluff unless things are tense or swear words are used.
+                            Output should consist of 2 sections: 
+                                Meeting summary - provide a summary of topics and issues discussed
+                                Action Items:  If any  actions were assigned or -taken by self specify them clearly in the following format - \n
+                                    Action items - 
+                                    - [Attendee] 
+                                            - <Action items assigned>
+                                    - [Attendee] ... and so on.. 
                             Do not repeat any of the actions in the summary section. 
-                            
+                            The output will be eventually displayed on an HTML page. So 
+                                enclose the entire content within a div tag. 
+                                Provide h2 and underline (u) tags for each section heading: Summary and Action items
+                                Create a bulleted list with bullets for each individual action item
                             TEXT:\n{text}
             '''
 
