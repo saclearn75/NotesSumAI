@@ -19,6 +19,21 @@ p {
     font-size: 24px;
 }
 
+/* This is the default, hidden state for the error message */
+.hidden-error {
+  display: none;
+}
+
+/* This is the visible, styled state for the error message */
+.visible-error {
+  display: block; /* Makes it a block element and visible */
+  color: red; /* Text color */
+  border: 4px solid red; /* A red border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px; /* Some padding around the text */
+
+}
+
 .header-box {
   /* Border */
   border: 4px solid rgb(216, 186, 14); 
@@ -49,6 +64,12 @@ p {
 
 .block-element{
     border: 2px solid rgb(216, 186, 14); 
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.block-error{
+    border: 2px solid red; 
     border-radius: 10px;
     padding: 10px;
 }

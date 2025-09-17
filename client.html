@@ -32,53 +32,11 @@
         </div>
         
         <div id="out" class="block-element"> Output here </div>
-    </div>
-  <script>
-    document.getElementById('go').onclick = async () => {
-      const text = document.getElementById('input').value;
-      const max = parseInt(document.getElementById('max').value || '200', 10);
-      const res = await fetch('http://127.0.0.1:8000/summarize', {
-        method: 'POST',
-        headers: {'Content-Type':'application/json'},
-        body: JSON.stringify({ text, max_words: max })
-      });
-      const data = await res.json();
-      document.getElementById('out').innerHTML = data.summary || JSON.stringify(data, null, 2);
-    };
-
-    document.addEventListener('DOMContentLoaded', function() {
+        <div id="error-message" class="hidden-error"> Error Text here </div>
         
-        const fileInput = document.getElementById('file_upload');
-        const textArea = document.getElementById('input');
+    </div>
 
-        fileInput.addEventListener('change', function(event) {
-            
-            const file = event.target.files[0]; // Get the first file selected
-            
-            if (!file) {
-                return; // Exit if no file was selected
-            }
-            
-            const reader = new FileReader();
+    <script type="module" src="app.js"></script></body>
 
-            // This function runs when the file is finished loading
-            reader.onload = function(e) {
-                const fileContent = e.target.result;
-                // The content of the file is now in the `fileContent` variable
-                textArea.value = fileContent; // Assign the content to the text area
-            };
-
-            // This function runs if there's an error
-            reader.onerror = function(e) {
-                console.error("Error reading file:", e);
-                alert("Failed to read file.");
-            };
-
-            // Read the file as text
-            reader.readAsText(file);
-        });
-    });
-
-  </script>
-</body>
+</body> 
 </html>

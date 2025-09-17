@@ -28,6 +28,7 @@ app = FastAPI(title="AI Notes Summarizer")
 origins = [
     "http://localhost",
     "http://127.0.0.1",
+    "http://127.0.0.1:5500",
     "http://localhost:8080", # if you're serving the frontend on a different port
     "file://", # This is for when you open the file directly in the browser
     "null" # Some browsers, especially Safari, use "null" for file:// origins
@@ -70,27 +71,36 @@ def summarize(payload: SummarizeIn):
                             TEXT:\n{text}
             '''
 
-    print(PROMPT)
+    # print(PROMPT)
+
 
     if not text:
         raise HTTPException(status_code=400, detail="No text provided.")
-    print ('Starting to sumamrize')
-    try:
-        resp = client.chat.completions.create(
-            model=MODEL,
-            messages=[
-                {"role": "system", "content": "You are a concise, neutral summarizer."},
-                {
-                    "role": "user",
-                    "content": PROMPT,
-                },
-            ],
-            temperature=0.2,
-        )
-        print ('summary completed successfuly')
-        summary = resp.choices[0].message.content.strip()
-        print (f'message received = {resp.choices[0].message.content.strip()}')
-        return {"summary": summary}
-    except Exception as e:
-        print (f'EXCEPTION: {e}')
-        raise HTTPException(status_code=500, detail=str(e))
+    CALL_API= 1
+    if CALL_API:
+        print ('Starting to sumamrize')
+        try:
+            resp = client.chat.completions.create(
+                model=MODEL,
+                messages=[
+                        {"role": "system", "content": "You are a concise, neutral summarizer."},
+                        {
+                            "role": "user",
+                            "content": PROMPT,
+                        },
+                    ],
+                temperature=0.2,
+            )
+            print ('summary completed successfuly')
+            summary = resp.choices[0].message.content.strip()
+            print (f'message received = {resp.choices[0].message.content.strip()}')
+            return {"summary": summary}
+        
+        except Exception as e:
+            print (f'EXCEPTION: {e}')
+            raise HTTPException(status_code=500, detail=str(e))
+    else:
+        sample = {"summary":"<p>Sample text</p>"}
+        print(f'{sample=}')
+        return sample
+        
