@@ -31,6 +31,12 @@
         headers: {'Content-Type':'application/json'},
         body: JSON.stringify({ text, max_words: max })
       });
+
+      if (!res.ok){
+        // the OpenAI API failed due to some reason
+        showError('OpenAI API failed: ')
+        return
+      }
       const data = await res.json();
 
       console.log("summary received is:", data.summary)
@@ -51,12 +57,13 @@
             
             hideError();
             if (!file) {
+                showError('No File was selected. Please select a file.')
                 return; // Exit if no file was selected
             }
             const fileExtension = file.name.split('.').pop().toLowerCase();            
             console.log (`file extension is ${fileExtension}`)            
             
-             const reader = new FileReader();
+            const reader = new FileReader();
 
             if (fileExtension === 'txt') {
                 const reader = new FileReader();
